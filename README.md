@@ -18,7 +18,7 @@ The assignment can be found here: https://github.com/solita/dev-academy-spring-2
 ### Building & running the app
 
 - clone the repository (https://github.com/LottaMarina/academy-backend.git)
-- navigate into the right folder: cd academy-bikes
+- navigate into the right folder: cd academy-backend
 - run: mvn clean install
 - run: mvn spring-boot:run
 
