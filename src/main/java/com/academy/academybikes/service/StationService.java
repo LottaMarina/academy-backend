@@ -3,6 +3,10 @@ package com.academy.academybikes.service;
 import com.academy.academybikes.entity.Station;
 import com.academy.academybikes.repository.StationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +21,8 @@ public class StationService {
         this.stationRepository = stationRepository;
     }
 
-    public List<Station> getAllStations() {
-        return stationRepository.findAll();
+    public Page<Station> getAllStations(int page, int size, Sort.Direction direction, String sortBy) {
+        Pageable pageable = PageRequest.of(page, size, direction, sortBy);
+        return stationRepository.findAll(pageable);
     }
 }

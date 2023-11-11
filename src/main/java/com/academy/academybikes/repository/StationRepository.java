@@ -1,7 +1,7 @@
 package com.academy.academybikes.repository;
 
 import com.academy.academybikes.entity.Station;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface StationRepository extends JpaRepository<Station, Long> {
+public interface StationRepository extends PagingAndSortingRepository<Station, Long> {
 }
